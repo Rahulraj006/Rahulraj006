@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 185" width="100%" height="100%">
+  <defs>
+    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5E62"/>
+      <stop offset="100%" stop-color="#FF9966"/>
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9D4EDD"/>
+      <stop offset="100%" stop-color="#C77DFF"/>
+    </linearGradient>
+    <linearGradient id="barGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E676"/>
+      <stop offset="100%" stop-color="#69F0AE"/>
+    </linearGradient>
+    <linearGradient id="barGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+
+    <style>
+      .label {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 12.5px;
+        font-weight: 600;
+        fill: #F1F5F9;
+      }
+      .val-tag {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 11.5px;
+        font-weight: 700;
+      }
+      .bg-bar {
+        fill: #191E2B;
+        rx: 4px;
+      }
+    </style>
+  </defs>
+
+  <rect width="838" height="183" x="1" y="1" rx="16" fill="#090B10" stroke="#1E2330" stroke-width="1.2"/>
+
+  <!-- Row 1: People & Empathy -->
+  <g transform="translate(45, 26)">
+    <text x="0" y="13" class="label">Human Connection &amp; Intuition</text>
+    <text x="750" y="13" text-anchor="end" class="val-tag" fill="#FF9966">99% • Deep Listener</text>
+    <rect x="0" y="22" width="750" height="8" class="bg-bar"/>
+    <rect x="0" y="22" width="740" height="8" rx="4" fill="url(#barGrad1)">
+      <animate attributeName="width" values="0;740" dur="1.2s" fill="freeze" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </rect>
+  </g>
+
+  <!-- Row 2: Taste & Aesthetics -->
+  <g transform="translate(45, 66)">
+    <text x="0" y="13" class="label">Product Taste &amp; Design Sensibility</text>
+    <text x="750" y="13" text-anchor="end" class="val-tag" fill="#C77DFF">96% • High Standards</text>
+    <rect x="0" y="22" width="750" height="8" class="bg-bar"/>
+    <rect x="0" y="22" width="720" height="8" rx="4" fill="url(#barGrad2)">
+      <animate attributeName="width" values="0;720" dur="1.4s" fill="freeze" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </rect>
+  </g>
+
+  <!-- Row 3: Commercial Instinct -->
+  <g transform="translate(45, 106)">
+    <text x="0" y="13" class="label">Commercial Instinct &amp; Opportunity Sensing</text>
+    <text x="750" y="13" text-anchor="end" class="val-tag" fill="#69F0AE">98% • Signal Over Noise</text>
+    <rect x="0" y="22" width="750" height="8" class="bg-bar"/>
+    <rect x="0" y="22" width="735" height="8" rx="4" fill="url(#barGrad3)">
+      <animate attributeName="width" values="0;735" dur="1.6s" fill="freeze" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </rect>
+  </g>
+
+  <!-- Row 4: Clutter / Jargon Tolerance -->
+  <g transform="translate(45, 146)">
+    <text x="0" y="13" class="label">Unnecessary Jargon &amp; Feature Bloat</text>
+    <text x="750" y="13" text-anchor="end" class="val-tag" fill="#38BDF8">0% • Ruthlessly Simple</text>
+    <rect x="0" y="22" width="750" height="8" class="bg-bar"/>
+    <rect x="0" y="22" width="20" height="8" rx="4" fill="url(#barGrad4)">
+      <animate attributeName="width" values="0;20" dur="1.8s" fill="freeze" calcMode="spline" keySplines="0.1 0.8 0.2 1"/>
+    </rect>
+  </g>
+</svg>

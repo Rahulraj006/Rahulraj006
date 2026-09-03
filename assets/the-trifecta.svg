@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 270" width="100%" height="100%">
+  <defs>
+    <!-- Dark Slate Luxury Background -->
+    <linearGradient id="podBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121620"/>
+      <stop offset="100%" stop-color="#0B0D13"/>
+    </linearGradient>
+
+    <!-- Energy Beam Gradients -->
+    <linearGradient id="beamLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5E62"/>
+      <stop offset="100%" stop-color="#FFA07A"/>
+    </linearGradient>
+
+    <linearGradient id="beamRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFA07A"/>
+      <stop offset="100%" stop-color="#9D4EDD"/>
+    </linearGradient>
+
+    <linearGradient id="coreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5E62"/>
+      <stop offset="50%" stop-color="#FF9966"/>
+      <stop offset="100%" stop-color="#9D4EDD"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes dashAnim {
+        from { stroke-dashoffset: 60; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes dashReverse {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: 60; }
+      }
+      @keyframes pulseCore {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.08); opacity: 1; filter: drop-shadow(0 0 16px #FF5E62); }
+      }
+      @keyframes orbitRotate {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .laser-flow {
+        stroke-dasharray: 8 6;
+        animation: dashAnim 1.8s linear infinite;
+      }
+      .laser-flow-rev {
+        stroke-dasharray: 8 6;
+        animation: dashReverse 2s linear infinite;
+      }
+      .core-pulsing {
+        transform-origin: 420px 135px;
+        animation: pulseCore 3s ease-in-out infinite;
+      }
+      .orbit-ring {
+        transform-origin: 420px 135px;
+        animation: orbitRotate 14s linear infinite;
+      }
+      .text-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+      .text-sub {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 400;
+        font-size: 11.5px;
+        fill: #94A3B8;
+      }
+      .text-badge {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 800;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Frame -->
+  <rect width="838" height="268" x="1" y="1" rx="16" fill="#090B10" stroke="#1E2330" stroke-width="1.2"/>
+
+  <!-- Energy Wave Circuit Lines -->
+  <path d="M 190 135 C 280 135, 330 135, 380 135" stroke="url(#beamLeft)" stroke-width="2.5" fill="none" class="laser-flow" opacity="0.8"/>
+  <path d="M 460 135 C 510 135, 560 135, 650 135" stroke="url(#beamRight)" stroke-width="2.5" fill="none" class="laser-flow" opacity="0.8"/>
+
+  <!-- Secondary Dynamic Crossflows -->
+  <path d="M 190 135 Q 420 50 650 135" stroke="#FF5E62" stroke-width="1.2" fill="none" stroke-dasharray="4 8" class="laser-flow" opacity="0.35"/>
+  <path d="M 190 135 Q 420 220 650 135" stroke="#9D4EDD" stroke-width="1.2" fill="none" stroke-dasharray="4 8" class="laser-flow-rev" opacity="0.35"/>
+
+  <!-- Pod 1: PEOPLE / RELATIONSHIPS (Left) -->
+  <g transform="translate(40, 50)">
+    <rect width="210" height="170" rx="12" fill="url(#podBg)" stroke="#FF5E62" stroke-width="1.2" stroke-opacity="0.6"/>
+    <rect width="210" height="3" x="0" y="0" rx="1" fill="#FF5E62"/>
+    
+    <text x="20" y="36" class="text-badge" fill="#FF5E62">PILLAR 01</text>
+    <text x="20" y="64" class="text-title" fill="#FFFFFF">PEOPLE FIRST</text>
+    
+    <text x="20" y="92" class="text-sub">• Relationship Capital</text>
+    <text x="20" y="112" class="text-sub">• Uncovering "Why Care"</text>
+    <text x="20" y="132" class="text-sub">• Unlocking Great Rooms</text>
+    <text x="20" y="152" class="text-sub">• Psychology of Trust</text>
+  </g>
+
+  <!-- Central Nexus: THE SWEET SPOT (Center) -->
+  <g>
+    <!-- Orbiting Ring -->
+    <ellipse cx="420" cy="135" rx="55" ry="55" fill="none" stroke="url(#coreGrad)" stroke-width="1.5" stroke-dasharray="6 10" class="orbit-ring" opacity="0.7"/>
+    
+    <!-- Outer Glow Aura -->
+    <circle cx="420" cy="135" r="42" fill="url(#coreGrad)" opacity="0.15" filter="url(#strongGlow)"/>
+    
+    <!-- Central Core -->
+    <g class="core-pulsing">
+      <circle cx="420" cy="135" r="34" fill="#0D1017" stroke="url(#coreGrad)" stroke-width="2.5" filter="url(#softGlow)"/>
+      <text x="420" y="131" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="10" fill="#FF9966" letter-spacing="1">THE SWEET</text>
+      <text x="420" y="145" text-anchor="middle" font-family="sans-serif" font-weight="900" font-size="10" fill="#FFFFFF" letter-spacing="1">SPOT</text>
+    </g>
+  </g>
+
+  <!-- Pod 2: BUSINESS & DESIGN (Right) -->
+  <g transform="translate(590, 50)">
+    <rect width="210" height="170" rx="12" fill="url(#podBg)" stroke="#9D4EDD" stroke-width="1.2" stroke-opacity="0.6"/>
+    <rect width="210" height="3" x="0" y="0" rx="1" fill="#9D4EDD"/>
+    
+    <text x="20" y="36" class="text-badge" fill="#9D4EDD">PILLAR 02</text>
+    <text x="20" y="64" class="text-title" fill="#FFFFFF">DESIGN &amp; VALUE</text>
+    
+    <text x="20" y="92" class="text-sub">• Commercial Instinct</text>
+    <text x="20" y="112" class="text-sub">• High Signal / Zero Fluff</text>
+    <text x="20" y="132" class="text-sub">• Taste &amp; Memorable UX</text>
+    <text x="20" y="152" class="text-sub">• Turning Vision to Scale</text>
+  </g>
+</svg>
