@@ -95,40 +95,6 @@ While code is the engine, **distribution, design, and relationship capital** are
 
 <br />
 
----
-
-## 👑 Sole Contributor &amp; Architect
-
-<div align="center">
-
-<table>
-  <tr>
-    <td align="center" style="padding: 20px;">
-      <a href="https://github.com/Rahulraj006">
-        <img src="https://github.com/Rahulraj006.png" width="110" height="110" style="border-radius: 50%; box-shadow: 0 4px 20px rgba(255, 94, 98, 0.4);" alt="Rahulraj006" />
-        <br /><br />
-        <b style="font-size: 16px;">Rahul Raj</b>
-      </a>
-      <br />
-      <a href="https://github.com/Rahulraj006"><code>@Rahulraj006</code></a>
-      <br /><br />
-      <span>Founder Mindset • Product Taste • Strategic Dealmaking</span>
-    </td>
-  </tr>
-</table>
-
-<br />
-
-<a href="https://github.com/Rahulraj006/Rahulraj006/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Rahulraj006/Rahulraj006" alt="Contributors" />
-</a>
-
-<br />
-<sub><b>100% Solely Authored &amp; Maintained by @Rahulraj006</b></sub>
-
-</div>
-
-<br />
 
 ---
 
