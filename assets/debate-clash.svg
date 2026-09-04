@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="arenaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090F"/>
+      <stop offset="50%" stop-color="#0E121E"/>
+      <stop offset="100%" stop-color="#05070B"/>
+    </linearGradient>
+
+    <linearGradient id="critGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF0055"/>
+      <stop offset="100%" stop-color="#FF5500"/>
+    </linearGradient>
+
+    <linearGradient id="retalGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#7000FF"/>
+    </linearGradient>
+
+    <filter id="clashGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes beamStrikeLeft {
+        0%, 100% { transform: translateX(0); opacity: 0.6; }
+        50% { transform: translateX(18px); opacity: 1; }
+      }
+      @keyframes beamStrikeRight {
+        0%, 100% { transform: translateX(0); opacity: 0.6; }
+        50% { transform: translateX(-18px); opacity: 1; }
+      }
+      @keyframes clashShock {
+        0% { r: 12; opacity: 1; stroke-width: 3; }
+        50% { r: 38; opacity: 0.4; stroke-width: 1.5; }
+        100% { r: 55; opacity: 0; stroke-width: 0.5; }
+      }
+      @keyframes sparkFly1 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-28px, -24px) scale(0.2); opacity: 0; }
+      }
+      @keyframes sparkFly2 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(32px, -30px) scale(0.2); opacity: 0; }
+      }
+      @keyframes sparkFly3 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(25px, 28px) scale(0.2); opacity: 0; }
+      }
+      @keyframes sparkFly4 {
+        0% { transform: translate(0, 0) scale(1); opacity: 1; }
+        100% { transform: translate(-30px, 25px) scale(0.2); opacity: 0; }
+      }
+      .clash-core {
+        transform-origin: 420px 110px;
+      }
+      .ring1 { animation: clashShock 2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite; }
+      .ring2 { animation: clashShock 2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite 0.7s; }
+      .sp1 { animation: sparkFly1 1.2s ease-out infinite; }
+      .sp2 { animation: sparkFly2 1.2s ease-out infinite 0.3s; }
+      .sp3 { animation: sparkFly3 1.2s ease-out infinite 0.6s; }
+      .sp4 { animation: sparkFly4 1.2s ease-out infinite 0.9s; }
+      .beam-left { animation: beamStrikeLeft 2s ease-in-out infinite; }
+      .beam-right { animation: beamStrikeRight 2s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- Arena Container -->
+  <rect width="836" height="216" x="2" y="2" rx="14" fill="url(#arenaBg)" stroke="#1A2234" stroke-width="1.2"/>
+
+  <!-- Arena Header Banner -->
+  <g transform="translate(40, 24)">
+    <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="900" font-size="13" fill="#64748B" letter-spacing="2">
+      THE DIALECTIC CRUCIBLE // HOW CRITICISM BECOMES CONVICTION
+    </text>
+  </g>
+
+  <!-- Left Side: Incoming Critique -->
+  <g transform="translate(40, 60)">
+    <rect width="260" height="120" rx="10" fill="#140D17" stroke="#FF0055" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="20" y="32" font-family="sans-serif" font-weight="800" font-size="14" fill="#FF0055" letter-spacing="1">
+      INCOMING CRITIQUE
+    </text>
+    <text x="20" y="56" font-family="sans-serif" font-size="11" fill="#FDA4AF">
+      • Skepticism &amp; Devil's Advocacy
+    </text>
+    <text x="20" y="74" font-family="sans-serif" font-size="11" fill="#FDA4AF">
+      • Stress-testing Assumptions
+    </text>
+    <text x="20" y="92" font-family="sans-serif" font-size="11" fill="#FDA4AF">
+      • High-Friction Debates
+    </text>
+  </g>
+
+  <!-- Crimson Attack Energy Stream -->
+  <g class="beam-left">
+    <path d="M 300 110 L 390 110" stroke="url(#critGrad)" stroke-width="4" stroke-linecap="round" filter="url(#clashGlow)"/>
+    <path d="M 300 100 L 380 108" stroke="#FF0055" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.7"/>
+    <path d="M 300 120 L 380 112" stroke="#FF5500" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.7"/>
+  </g>
+
+  <!-- Center Clash Point (Sparks & Shockwave) -->
+  <g class="clash-core" transform="translate(0, 0)">
+    <!-- Shockwaves -->
+    <circle cx="420" cy="110" r="14" fill="none" stroke="#FFFFFF" class="ring1"/>
+    <circle cx="420" cy="110" r="14" fill="none" stroke="#00F0FF" class="ring2"/>
+    
+    <!-- Core Nucleus -->
+    <circle cx="420" cy="110" r="10" fill="#FFFFFF" filter="url(#clashGlow)"/>
+    
+    <!-- Flying Sparks -->
+    <g transform="translate(420, 110)">
+      <circle class="sp1" cx="0" cy="0" r="3" fill="#FFD700"/>
+      <circle class="sp2" cx="0" cy="0" r="2.5" fill="#00F0FF"/>
+      <circle class="sp3" cx="0" cy="0" r="3" fill="#FF0055"/>
+      <circle class="sp4" cx="0" cy="0" r="2" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Clash Label -->
+    <text x="420" y="152" text-anchor="middle" font-family="monospace" font-size="10" font-weight="900" fill="#E2E8F0" letter-spacing="1.5">
+      [ RETALIATION CATALYST ]
+    </text>
+  </g>
+
+  <!-- Cyan Retaliation Energy Stream -->
+  <g class="beam-right">
+    <path d="M 540 110 L 450 110" stroke="url(#retalGrad)" stroke-width="4" stroke-linecap="round" filter="url(#clashGlow)"/>
+    <path d="M 540 100 L 460 108" stroke="#00F0FF" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.7"/>
+    <path d="M 540 120 L 460 112" stroke="#7000FF" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.7"/>
+  </g>
+
+  <!-- Right Side: Refined Thesis / Retaliation -->
+  <g transform="translate(540, 60)">
+    <rect width="260" height="120" rx="10" fill="#0A1624" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.5"/>
+    <text x="20" y="32" font-family="sans-serif" font-weight="800" font-size="14" fill="#00F0FF" letter-spacing="1">
+      RETALIATION &amp; SYNTHESIS
+    </text>
+    <text x="20" y="56" font-family="sans-serif" font-size="11" fill="#BAE6FD">
+      • Unforgiving Logical Counters
+    </text>
+    <text x="20" y="74" font-family="sans-serif" font-size="11" fill="#BAE6FD">
+      • Razor-Sharp Commercial Clarity
+    </text>
+    <text x="20" y="92" font-family="sans-serif" font-size="11" fill="#BAE6FD">
+      • Truth Forged Under Pressure
+    </text>
+  </g>
+</svg>

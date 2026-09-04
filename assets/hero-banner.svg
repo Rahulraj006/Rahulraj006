@@ -2,36 +2,36 @@
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08090C"/>
-      <stop offset="50%" stop-color="#0F1118"/>
-      <stop offset="100%" stop-color="#090A0F"/>
+      <stop offset="0%" stop-color="#07090F"/>
+      <stop offset="50%" stop-color="#0C101C"/>
+      <stop offset="100%" stop-color="#05070B"/>
     </linearGradient>
 
     <!-- Glowing Accent Gradients -->
     <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF5E62">
-        <animate attributeName="stop-color" values="#FF5E62;#FF9966;#9D4EDD;#FF5E62" dur="8s" repeatCount="indefinite"/>
+      <stop offset="0%" stop-color="#00F0FF">
+        <animate attributeName="stop-color" values="#00F0FF;#A855F7;#FF007A;#00F0FF" dur="7s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="50%" stop-color="#FF9966">
-        <animate attributeName="stop-color" values="#FF9966;#9D4EDD;#FF5E62;#FF9966" dur="8s" repeatCount="indefinite"/>
+      <stop offset="50%" stop-color="#A855F7">
+        <animate attributeName="stop-color" values="#A855F7;#FF007A;#00F0FF;#A855F7" dur="7s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="100%" stop-color="#9D4EDD">
-        <animate attributeName="stop-color" values="#9D4EDD;#FF5E62;#FF9966;#9D4EDD" dur="8s" repeatCount="indefinite"/>
+      <stop offset="100%" stop-color="#FF007A">
+        <animate attributeName="stop-color" values="#FF007A;#00F0FF;#A855F7;#FF007A" dur="7s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
 
     <linearGradient id="textShine" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="50%" stop-color="#FFD6A5"/>
+      <stop offset="50%" stop-color="#BAE6FD"/>
       <stop offset="100%" stop-color="#FFFFFF"/>
     </linearGradient>
 
     <radialGradient id="meshGlow" cx="50%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#FF5E62" stop-opacity="0.18">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.18">
         <animate attributeName="stop-opacity" values="0.18;0.32;0.18" dur="4s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="60%" stop-color="#9D4EDD" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#08090C" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#7000FF" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#07090F" stop-opacity="0"/>
     </radialGradient>
 
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -40,14 +40,6 @@
     </filter>
 
     <style>
-      @keyframes floatPulse {
-        0%, 100% { transform: translateY(0px) scale(1); }
-        50% { transform: translateY(-3px) scale(1.01); }
-      }
-      @keyframes radarSweep {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
       @keyframes blink {
         0%, 100% { opacity: 1; }
         50% { opacity: 0.3; }
@@ -65,13 +57,13 @@
       }
       .tagline {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        font-weight: 600;
-        font-size: 15px;
-        letter-spacing: 3px;
+        font-weight: 700;
+        font-size: 13.5px;
+        letter-spacing: 2.5px;
       }
       .pill-text {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 11.5px;
         letter-spacing: 0.5px;
       }
@@ -83,24 +75,24 @@
   </defs>
 
   <!-- Background Card -->
-  <rect width="838" height="258" x="1" y="1" rx="16" fill="url(#bgGrad)" stroke="#2D3139" stroke-width="1.2"/>
+  <rect width="838" height="258" x="1" y="1" rx="16" fill="url(#bgGrad)" stroke="#1F293D" stroke-width="1.2"/>
   <rect width="838" height="258" x="1" y="1" rx="16" fill="url(#meshGlow)"/>
 
-  <!-- Ambient Floating Particles -->
-  <circle class="p1" cx="120" cy="80" r="2.5" fill="#FF5E62"/>
-  <circle class="p2" cx="720" cy="70" r="3" fill="#FF9966"/>
-  <circle class="p3" cx="650" cy="190" r="2" fill="#9D4EDD"/>
-  <circle class="p1" cx="210" cy="180" r="2.2" fill="#FF5E62"/>
+  <!-- Ambient Floating Aura Particles -->
+  <circle class="p1" cx="120" cy="80" r="2.5" fill="#00F0FF"/>
+  <circle class="p2" cx="720" cy="70" r="3" fill="#A855F7"/>
+  <circle class="p3" cx="650" cy="190" r="2" fill="#FF007A"/>
+  <circle class="p1" cx="210" cy="180" r="2.2" fill="#00F0FF"/>
 
-  <!-- Subtle Grid Accent Lines -->
-  <line x1="60" y1="40" x2="780" y2="40" stroke="#FFFFFF" stroke-opacity="0.04" stroke-dasharray="4,6"/>
-  <line x1="60" y1="220" x2="780" y2="220" stroke="#FFFFFF" stroke-opacity="0.04" stroke-dasharray="4,6"/>
+  <!-- Tech Lines -->
+  <line x1="60" y1="40" x2="780" y2="40" stroke="#00F0FF" stroke-opacity="0.08" stroke-dasharray="4,6"/>
+  <line x1="60" y1="220" x2="780" y2="220" stroke="#00F0FF" stroke-opacity="0.08" stroke-dasharray="4,6"/>
 
-  <!-- Live Status Badge (Top Right) -->
-  <g transform="translate(620, 24)">
-    <rect width="160" height="26" rx="13" fill="#141822" stroke="#2B3245" stroke-width="1"/>
-    <circle class="live-dot" cx="16" cy="13" r="4.5" fill="#00E676" filter="url(#glow)"/>
-    <text x="30" y="17" fill="#E2E8F0" class="pill-text" font-weight="600">OPEN TO VENTURES</text>
+  <!-- Top Right Manhwa Rank Badges -->
+  <g transform="translate(580, 24)">
+    <rect width="200" height="26" rx="6" fill="#0C1322" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.6"/>
+    <circle class="live-dot" cx="16" cy="13" r="4.5" fill="#00F0FF" filter="url(#glow)"/>
+    <text x="30" y="17" fill="#E2E8F0" class="pill-text" font-weight="700">SSS-RANK SOVEREIGN</text>
   </g>
 
   <!-- Main Name / Identity -->
@@ -112,34 +104,34 @@
   <!-- Tagline / Mission -->
   <g transform="translate(60, 142)">
     <text x="0" y="0" class="tagline" fill="url(#accentGrad)">
-      PEOPLE FIRST • IDEAS WITH TASTE • BUSINESS WITH A PULSE
+      IDEAS WITH TASTE • UNFORGIVING IN DEBATE • BUSINESS WITH A PULSE
     </text>
   </g>
 
   <!-- Interactive Pill Tags (Pillars) -->
   <g transform="translate(60, 176)">
-    <!-- Pill 1: Human Connection -->
+    <!-- Pill 1: Dialectic / Debate -->
     <g transform="translate(0, 0)">
-      <rect width="168" height="32" rx="8" fill="#151821" stroke="#FF5E62" stroke-width="1" stroke-opacity="0.5"/>
-      <text x="14" y="20" fill="#FFD6D7" class="pill-text">🤝 Relationship Capital</text>
+      <rect width="172" height="32" rx="8" fill="#13101C" stroke="#FF0055" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="14" y="20" fill="#FECDD3" class="pill-text">⚔️ Dialectic Combat</text>
     </g>
 
-    <!-- Pill 2: Design Sense -->
-    <g transform="translate(180, 0)">
-      <rect width="168" height="32" rx="8" fill="#151821" stroke="#FF9966" stroke-width="1" stroke-opacity="0.5"/>
-      <text x="14" y="20" fill="#FFE5D9" class="pill-text">🎨 Taste &amp; Experience</text>
+    <!-- Pill 2: Taste & Design -->
+    <g transform="translate(184, 0)">
+      <rect width="172" height="32" rx="8" fill="#111827" stroke="#A855F7" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="14" y="20" fill="#E9D5FF" class="pill-text">🎨 High-Aura Design</text>
     </g>
 
-    <!-- Pill 3: Business Strategy -->
-    <g transform="translate(360, 0)">
-      <rect width="176" height="32" rx="8" fill="#151821" stroke="#9D4EDD" stroke-width="1" stroke-opacity="0.5"/>
-      <text x="14" y="20" fill="#E9D5FF" class="pill-text">📈 Commercial Instinct</text>
+    <!-- Pill 3: Venture / People -->
+    <g transform="translate(368, 0)">
+      <rect width="176" height="32" rx="8" fill="#0B1322" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.6"/>
+      <text x="14" y="20" fill="#BAE6FD" class="pill-text">🤝 Relationship Capital</text>
     </g>
 
-    <!-- Pill 4: Momentum -->
-    <g transform="translate(548, 0)">
-      <rect width="168" height="32" rx="8" fill="#151821" stroke="#00E676" stroke-width="1" stroke-opacity="0.4"/>
-      <text x="14" y="20" fill="#D1FAE5" class="pill-text">⚡ Strategic Velocity</text>
+    <!-- Pill 4: Manhwa Repertoire -->
+    <g transform="translate(556, 0)">
+      <rect width="168" height="32" rx="8" fill="#0B1917" stroke="#00E676" stroke-width="1" stroke-opacity="0.5"/>
+      <text x="14" y="20" fill="#D1FAE5" class="pill-text">📖 Top 0.01% Reader</text>
     </g>
   </g>
 </svg>

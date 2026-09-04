@@ -1,46 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 110" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 120" width="100%" height="100%">
   <defs>
-    <linearGradient id="quoteTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="60%" stop-color="#FDE047"/>
-      <stop offset="100%" stop-color="#FF9966"/>
+    <linearGradient id="quoteBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#7000FF"/>
+      <stop offset="100%" stop-color="#FF0055"/>
     </linearGradient>
 
     <style>
-      @keyframes softPulse {
-        0%, 100% { opacity: 0.85; transform: scale(1); }
-        50% { opacity: 1; transform: scale(1.008); }
-      }
-      .quote-content {
+      .quote-main {
         font-family: 'Georgia', -apple-system, serif;
         font-style: italic;
-        font-size: 19px;
+        font-size: 17.5px;
         fill: #F8FAFC;
         letter-spacing: 0.2px;
       }
-      .quote-author {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-size: 12px;
+      .quote-sub {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
+        font-size: 11.5px;
         font-weight: 700;
-        fill: #FF9966;
+        fill: #00F0FF;
         letter-spacing: 1.5px;
       }
     </style>
   </defs>
 
-  <rect width="838" height="108" x="1" y="1" rx="14" fill="#090B10" stroke="#1E2330" stroke-width="1.2"/>
+  <rect width="836" height="116" x="2" y="2" rx="12" fill="#080C16" stroke="#1E293B" stroke-width="1.2"/>
   
-  <!-- Left Accent Bar with Animated Pulse -->
-  <rect x="25" y="24" width="4" height="60" rx="2" fill="#FF5E62">
-    <animate attributeName="fill" values="#FF5E62;#9D4EDD;#FF5E62" dur="6s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Left Accent Bar -->
+  <rect x="24" y="22" width="4" height="72" rx="2" fill="url(#quoteBar)"/>
 
-  <g transform="translate(48, 50)">
-    <text x="0" y="0" class="quote-content">
-      “Features can be copied. Taste, timing, and trust cannot.”
+  <g transform="translate(46, 52)">
+    <text x="0" y="0" class="quote-main">
+      “Criticism is merely unrefined truth. Bring your strongest counter-thesis —
     </text>
-    <text x="0" y="26" class="quote-author">
-      — RAHUL RAJ • CIT CHENNAI
+    <text x="0" y="24" class="quote-main">
+      consensus builds nothing legendary. Steel sharpens steel.”
+    </text>
+    <text x="0" y="50" class="quote-sub">
+      — RAHUL RAJ // THE DEBATE FLOOR
     </text>
   </g>
 </svg>

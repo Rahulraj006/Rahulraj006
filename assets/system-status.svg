@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 370" width="100%" height="100%">
+  <defs>
+    <!-- Dark Holo Background -->
+    <linearGradient id="holoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B14"/>
+      <stop offset="50%" stop-color="#0D1322"/>
+      <stop offset="100%" stop-color="#06080F"/>
+    </linearGradient>
+
+    <!-- Electric Cyan / Neon Violet Gradients -->
+    <linearGradient id="sysBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="35%" stop-color="#7000FF"/>
+      <stop offset="70%" stop-color="#FF007A"/>
+      <stop offset="100%" stop-color="#00F0FF"/>
+    </linearGradient>
+
+    <linearGradient id="statCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="100%" stop-color="#0088FF"/>
+    </linearGradient>
+
+    <linearGradient id="statCrimson" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF0055"/>
+      <stop offset="100%" stop-color="#FFAA00"/>
+    </linearGradient>
+
+    <linearGradient id="statPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="100%" stop-color="#EC4899"/>
+    </linearGradient>
+
+    <linearGradient id="scanlineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00F0FF" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#00F0FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="strongNeon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes scanMotion {
+        0% { transform: translateY(-50px); opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { transform: translateY(370px); opacity: 0; }
+      }
+      @keyframes pulseBorder {
+        0%, 100% { opacity: 0.7; }
+        50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.8)); }
+      }
+      @keyframes flicker {
+        0%, 100% { opacity: 1; }
+        45% { opacity: 0.85; }
+        50% { opacity: 0.4; }
+        55% { opacity: 0.95; }
+        70% { opacity: 0.7; }
+      }
+      @keyframes barFill1 { 0% { width: 0; } 100% { width: 440px; } }
+      @keyframes barFill2 { 0% { width: 0; } 100% { width: 450px; } }
+      @keyframes barFill3 { 0% { width: 0; } 100% { width: 435px; } }
+      @keyframes barFill4 { 0% { width: 0; } 100% { width: 450px; } }
+
+      .system-header {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Courier New', monospace;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 3px;
+        fill: #00F0FF;
+      }
+      .char-name {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 900;
+        font-size: 26px;
+        fill: #FFFFFF;
+        letter-spacing: 1px;
+      }
+      .rank-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        fill: #A855F7;
+        letter-spacing: 1.5px;
+      }
+      .stat-label {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
+        font-size: 11.5px;
+        font-weight: 700;
+        fill: #94A3B8;
+        letter-spacing: 1px;
+      }
+      .stat-value {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
+        font-size: 11.5px;
+        font-weight: 800;
+      }
+      .skill-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 12px;
+        font-weight: 800;
+        fill: #00F0FF;
+      }
+      .skill-desc {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 11px;
+        font-weight: 400;
+        fill: #CBD5E1;
+      }
+      .scanline {
+        animation: scanMotion 4.5s linear infinite;
+      }
+      .holo-pulse {
+        animation: pulseBorder 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="836" height="366" x="2" y="2" rx="14" fill="url(#holoBg)" stroke="#162036" stroke-width="1.5"/>
+
+  <!-- Glowing System Border (Manhwa UI style) -->
+  <rect class="holo-pulse" width="836" height="366" x="2" y="2" rx="14" fill="none" stroke="url(#sysBorderGrad)" stroke-width="1.8"/>
+
+  <!-- Scanning Laser Bar -->
+  <g class="scanline">
+    <rect x="2" y="0" width="836" height="40" fill="url(#scanlineGrad)"/>
+    <line x1="10" y1="20" x2="830" y2="20" stroke="#00F0FF" stroke-width="1.2" opacity="0.6"/>
+  </g>
+
+  <!-- Tech Corner Markers -->
+  <path d="M 8 26 L 8 8 L 26 8" stroke="#00F0FF" stroke-width="2.5" fill="none"/>
+  <path d="M 832 26 L 832 8 L 814 8" stroke="#00F0FF" stroke-width="2.5" fill="none"/>
+  <path d="M 8 344 L 8 362 L 26 362" stroke="#00F0FF" stroke-width="2.5" fill="none"/>
+  <path d="M 832 344 L 832 362 L 814 362" stroke="#00F0FF" stroke-width="2.5" fill="none"/>
+
+  <!-- Top System Header Pill -->
+  <g transform="translate(38, 22)">
+    <rect width="320" height="24" rx="4" fill="#0A1324" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.6"/>
+    <circle cx="14" cy="12" r="4" fill="#00F0FF" filter="url(#neonGlow)"/>
+    <text x="26" y="16" class="system-header">HUNTER SYSTEM // STATUS SCREEN</text>
+  </g>
+
+  <!-- System Badge (Top Right) -->
+  <g transform="translate(680, 22)">
+    <rect width="120" height="24" rx="4" fill="#1C0E28" stroke="#FF007A" stroke-width="1.2"/>
+    <text x="60" y="16" text-anchor="middle" font-family="monospace" font-size="11" font-weight="900" fill="#FF007A" letter-spacing="1">RANK: SSS-CLASS</text>
+  </g>
+
+  <!-- Character / Entity Header -->
+  <g transform="translate(38, 72)">
+    <text x="0" y="0" class="char-name">RAHUL RAJ</text>
+    <text x="185" y="-3" class="rank-title">[ THE DIALECTIC SOVEREIGN ]</text>
+    <text x="0" y="20" font-family="sans-serif" font-size="11" fill="#64748B">
+      Class: Strategic Catalyst • Trait: Relentless Retaliation • Domain: People × Design × Venture
+    </text>
+  </g>
+
+  <line x1="38" y1="106" x2="802" y2="106" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Left Column: Core Stats -->
+  <g transform="translate(38, 126)">
+    <!-- Stat 1: Debate & Retaliation -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="12" class="stat-label">DIALECTIC RETALIATION</text>
+      <text x="450" y="12" text-anchor="end" class="stat-value" fill="#FF0055">99/99 [Max • Instant Counter]</text>
+      <rect x="0" y="18" width="450" height="7" rx="3.5" fill="#111827"/>
+      <rect x="0" y="18" width="445" height="7" rx="3.5" fill="url(#statCrimson)"/>
+    </g>
+
+    <!-- Stat 2: Criticism Digestion -->
+    <g transform="translate(0, 42)">
+      <text x="0" y="12" class="stat-label">CRITICISM ABSORPTION</text>
+      <text x="450" y="12" text-anchor="end" class="stat-value" fill="#00F0FF">100/100 [Flak Converted to Fuel]</text>
+      <rect x="0" y="18" width="450" height="7" rx="3.5" fill="#111827"/>
+      <rect x="0" y="18" width="450" height="7" rx="3.5" fill="url(#statCyan)"/>
+    </g>
+
+    <!-- Stat 3: Product Taste -->
+    <g transform="translate(0, 84)">
+      <text x="0" y="12" class="stat-label">PRODUCT TASTE &amp; AURA</text>
+      <text x="450" y="12" text-anchor="end" class="stat-value" fill="#A855F7">98/99 [S-Rank Aesthetics]</text>
+      <rect x="0" y="18" width="450" height="7" rx="3.5" fill="#111827"/>
+      <rect x="0" y="18" width="438" height="7" rx="3.5" fill="url(#statPurple)"/>
+    </g>
+
+    <!-- Stat 4: Manhwa Lore Archive -->
+    <g transform="translate(0, 126)">
+      <text x="0" y="12" class="stat-label">MANHWA ARCHIVE ARCHITECTURE</text>
+      <text x="450" y="12" text-anchor="end" class="stat-value" fill="#38BDF8">∞ [Omniscient Tier Reader]</text>
+      <rect x="0" y="18" width="450" height="7" rx="3.5" fill="#111827"/>
+      <rect x="0" y="18" width="450" height="7" rx="3.5" fill="url(#statCyan)"/>
+    </g>
+
+    <!-- Stat 5: Tolerance for Fluff -->
+    <g transform="translate(0, 168)">
+      <text x="0" y="12" class="stat-label">TOLERANCE FOR JARGON &amp; FLUFF</text>
+      <text x="450" y="12" text-anchor="end" class="stat-value" fill="#64748B">0/99 [Immediate Piercing]</text>
+      <rect x="0" y="18" width="450" height="7" rx="3.5" fill="#111827"/>
+      <rect x="0" y="18" width="8" height="7" rx="3.5" fill="#EF4444"/>
+    </g>
+  </g>
+
+  <!-- Right Column: Unique System Skills (Awakened Passives) -->
+  <g transform="translate(520, 126)">
+    <!-- Skill 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="280" height="52" rx="8" fill="#0C1322" stroke="#00F0FF" stroke-width="1" stroke-opacity="0.4"/>
+      <text x="14" y="20" class="skill-title">⚡ [PASSIVE] Iron Rebuttal</text>
+      <text x="14" y="38" class="skill-desc">Takes 0 damage from harsh critique; returns 200% sharper logical synthesis.</text>
+    </g>
+
+    <!-- Skill 2 -->
+    <g transform="translate(0, 64)">
+      <rect width="280" height="52" rx="8" fill="#160E22" stroke="#A855F7" stroke-width="1" stroke-opacity="0.4"/>
+      <text x="14" y="20" class="skill-title" fill="#C084FC">👁️ [INSIGHT] Reader's Viewpoint</text>
+      <text x="14" y="38" class="skill-desc">Instant pattern recognition across business dynamics, narrative moats &amp; UI.</text>
+    </g>
+
+    <!-- Skill 3 -->
+    <g transform="translate(0, 128)">
+      <rect width="280" height="52" rx="8" fill="#1C0F1A" stroke="#FF007A" stroke-width="1" stroke-opacity="0.4"/>
+      <text x="14" y="20" class="skill-title" fill="#FF4D94">👑 [DOMAIN] Sovereign Network</text>
+      <text x="14" y="38" class="skill-desc">Commands the room; connects visionaries, capital &amp; relentless builders.</text>
+    </g>
+  </g>
+
+  <!-- Bottom System Quote Footer -->
+  <g transform="translate(38, 342)">
+    <text x="0" y="0" font-family="monospace" font-size="10.5" fill="#00F0FF" opacity="0.8">
+      ▶ "The world isn't shaped by agreement; it is forged by those who survive the clash of ideas."
+    </text>
+  </g>
+</svg>
